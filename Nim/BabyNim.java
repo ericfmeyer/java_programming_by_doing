@@ -1,21 +1,45 @@
 import java.util.Random;
 import java.util.Scanner;
 
+class Pile {
+    private int count;
+
+    public void Pile(int n) {
+        count = n;
+    }
+
+    public void setPileCount(int n) {
+        count = n;
+    }
+
+    public int getPileCount() {
+        return count;
+    }
+}
+
+class Piles {
+    private int number_of_piles;
+
+    public void Piles(int size) {
+        
+    }
+}
+
 public class BabyNim {
     final static int NUMBER_OF_PILES = 3;
 
-    public static int[] fillPiles(int n) {
+    public static Pile[] fillPiles(int n) {
         Random r = new Random();
-        int[] retval = new int[n];
+        Pile[] retval = new Pile[n];
 
         for (int i = 0; i < n; i++) {
-            retval[i] = 1 + r.nextInt(5);
+            retval[i].setPileCount(1 + r.nextInt(5));
         }
 
         return retval;
     }
 
-    public static void printPiles(int[] piles) {
+    public static void printPiles(Pile[] piles) {
         for (int i = 0; i < piles.length; i++) {
             System.out.print((char) ((int) 'A' + i) + ": " + piles[i] + "\t");
         }
@@ -34,9 +58,10 @@ public class BabyNim {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        int[] piles = fillPiles(NUMBER_OF_PILES);
+        Pile[] piles = fillPiles(NUMBER_OF_PILES);
         String pile;
         int to_remove;
+        int pile_index;
 
         do {
             printPiles(piles);
@@ -44,7 +69,8 @@ public class BabyNim {
             pile = keyboard.next();
             System.out.print("How many to remove from pile " + pile + ": ");
             to_remove = keyboard.nextInt();
-            piles[(int) pile.charAt(0) - (int) 'A'] -=  to_remove;
+            pile_index = (int) pile.charAt(0) - (int) 'A';
+            piles[pile_index].setPileCount(piles[pile_index].getPileCount() - to_remove);
         } while (!areAllPilesEmpty(piles));
 
         System.out.println("\nAll piles are empty.Good job!");
