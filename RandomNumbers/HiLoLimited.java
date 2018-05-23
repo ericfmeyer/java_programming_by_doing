@@ -2,12 +2,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class HiLoLimited {
+    final static int MAX_TRIES = 7;
+
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         Random r = new Random();
         int secret = 1 + r.nextInt(100);
         int guess, tries = 1;
-        final int MAX_TRIES = 7;
 
         System.out.println("I'm thinking of a number between 1 and 100. You have " + MAX_TRIES + " guesses.");
         System.out.print("First guess: ");
