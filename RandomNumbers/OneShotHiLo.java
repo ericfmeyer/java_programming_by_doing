@@ -9,7 +9,6 @@ public class OneShotHiLo {
         int guess;
         String text;
 
-
         System.out.println("I'm thinking of a number between 1 and 100. Try to guess it.");
         System.out.print("> ");
         guess = keyboard.nextInt();
