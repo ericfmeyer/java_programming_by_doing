@@ -14,8 +14,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Nim$All_in_Nim.coverage" NAME="All in Nim Coverage Results" MODIFIED="1527196134633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Nim$All_in_Nim.coverage" NAME="All in Nim Coverage Results" MODIFIED="1527197274720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Nim$PileTest.coverage" NAME="PileTest Coverage Results" MODIFIED="1527191402950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Nim$NimTest.coverage" NAME="NimTest Coverage Results" MODIFIED="1527197225105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Nim$GroupOfPilesTest.coverage" NAME="GroupOfPilesTest Coverage Results" MODIFIED="1527192082837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Nim$GroupOfPilesTest_getPileByNameShouldReturnCorrectPile.coverage" NAME="GroupOfPilesTest.getPileByNameShouldReturnCorrectPile Coverage Results" MODIFIED="1527189683988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
@@ -33,13 +34,19 @@
       <file leaf-file-name="Nim.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Nim.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="519">
+              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
-                <element signature="e#426#427#0" expanded="true" />
-                <element signature="e#466#467#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
-                <element signature="e#548#549#0" expanded="true" />
+                <element signature="e#433#434#0" expanded="true" />
+                <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+                <element signature="e#739#740#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#821#822#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#893#894#0" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
+                <element signature="e#978#979#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,12 +55,16 @@
       <file leaf-file-name="NimTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/NimTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="315">
+              <caret line="34" column="58" lean-forward="true" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#165#166#0" expanded="true" />
                 <element signature="e#206#207#0" expanded="true" />
+                <element signature="e#953#954#0" expanded="true" />
+                <element signature="e#1018#1019#0" expanded="true" />
+                <element signature="e#1084#1085#0" expanded="true" />
+                <element signature="e#1146#1147#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,8 +99,8 @@
         <option value="$PROJECT_DIR$/src/Pile.java" />
         <option value="$PROJECT_DIR$/src/BabyNim.java" />
         <option value="$PROJECT_DIR$/test/Nimtest.java" />
-        <option value="$PROJECT_DIR$/src/Nim.java" />
         <option value="$PROJECT_DIR$/test/NimTest.java" />
+        <option value="$PROJECT_DIR$/src/Nim.java" />
       </list>
     </option>
   </component>
@@ -169,7 +180,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in Nim">
+  <component name="RunManager" selected="Application.Nim">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -180,6 +191,20 @@
     <configuration name="GroupOfPiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="GroupOfPiles" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Nim" />
+      <envs />
+    </configuration>
+    <configuration name="Nim" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Nim" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -253,26 +278,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="NimTest" />
       <option name="METHOD_NAME" value="getPlayerReturnsCorrectName" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="NimTest.getPlayersReturnsCorrectNameWithDefaultConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Nim" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NimTest" />
-      <option name="METHOD_NAME" value="getPlayersReturnsCorrectNameWithDefaultConstructor" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -721,17 +726,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in Nim" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.NimTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.NimTest.getPlayersReturnsCorrectNameWithDefaultConstructor" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.NimTest.getPlayerReturnsCorrectName" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.NimTest.setPlayerModifiesPlayerName" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.NimTest.getPlayerReturnsCorrectName" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.NimTest.setPlayerModifiesPlayerName" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Nim" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in Nim" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.NimTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.NimTest.setPlayerModifiesPlayerName" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.NimTest.getPlayerReturnsCorrectName" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.NimTest.getPlayersReturnsCorrectNameWithDefaultConstructor" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Nim" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in Nim" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.NimTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.NimTest.setPlayerModifiesPlayerName" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.NimTest.getPlayerReturnsCorrectName" />
       </list>
     </recent_temporary>
   </component>
@@ -758,35 +763,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_Nim - 2018.05.24 at 16h 00m 35s.xml">
-      <configuration name="All in Nim" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_Nim - 2018.05.24 at 16h 02m 53s.xml">
-      <configuration name="All in Nim" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_Nim - 2018.05.24 at 16h 08m 55s.xml">
       <configuration name="All in Nim" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NimTest - 2018.05.24 at 16h 00m 00s.xml">
+    <history-entry file="All_in_Nim - 2018.05.24 at 16h 15m 55s.xml">
+      <configuration name="All in Nim" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Nim - 2018.05.24 at 16h 27m 55s.xml">
+      <configuration name="All in Nim" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NimTest - 2018.05.24 at 16h 19m 14s.xml">
       <configuration name="NimTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NimTest - 2018.05.24 at 16h 03m 04s.xml">
+    <history-entry file="NimTest - 2018.05.24 at 16h 21m 53s.xml">
       <configuration name="NimTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NimTest - 2018.05.24 at 16h 07m 59s.xml">
+    <history-entry file="NimTest - 2018.05.24 at 16h 23m 08s.xml">
       <configuration name="NimTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NimTest - 2018.05.24 at 16h 08m 49s.xml">
+    <history-entry file="NimTest - 2018.05.24 at 16h 23m 27s.xml">
       <configuration name="NimTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NimTest_getPlayerReturnsCorrectName - 2018.05.24 at 16h 05m 33s.xml">
-      <configuration name="NimTest.getPlayerReturnsCorrectName" configurationId="JUnit" />
+    <history-entry file="NimTest - 2018.05.24 at 16h 23m 59s.xml">
+      <configuration name="NimTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NimTest_getPlayersReturnsCorrectNameWithDefaultConstructor - 2018.05.24 at 16h 05m 23s.xml">
-      <configuration name="NimTest.getPlayersReturnsCorrectNameWithDefaultConstructor" configurationId="JUnit" />
+    <history-entry file="NimTest - 2018.05.24 at 16h 24m 15s.xml">
+      <configuration name="NimTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NimTest_setPlayerModifiesPlayerName - 2018.05.24 at 16h 05m 57s.xml">
-      <configuration name="NimTest.setPlayerModifiesPlayerName" configurationId="JUnit" />
+    <history-entry file="NimTest - 2018.05.24 at 16h 27m 05s.xml">
+      <configuration name="NimTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -963,25 +968,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/NimTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state relative-caret-position="315">
+          <caret line="34" column="58" lean-forward="true" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#165#166#0" expanded="true" />
             <element signature="e#206#207#0" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Nim.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="519">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
           </folding>
         </state>
       </provider>
