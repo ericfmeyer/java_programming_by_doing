@@ -39,6 +39,14 @@ public class Nim {
         return theBoard;
     }
 
+    public boolean isPileEmpty(String name) {
+        return this.getTheBoard().getPileByName(name).isEmpty();
+    }
+
+    public int getPileCount(String name) {
+        return this.getTheBoard().getPileByName(name).getCount();
+    }
+
     public boolean isFinished() {
         return theBoard.areAllPilesEmpty();
     }
@@ -48,7 +56,7 @@ public class Nim {
         Scanner keyboard = new Scanner(System.in);
         String selectedPile;
         int countToRemove;
-        int player = 0;
+        int currentPlayer = 0;
 
         for (int i = 0; i < 2; i++) {
             System.out.print("Player " + i + ", enter your name: ");
@@ -56,19 +64,31 @@ public class Nim {
             System.out.println(game.getPlayer(i));
         }
 
-        do {
+        while (!game.isFinished()) {
             System.out.println(game.theBoard.generateOutputString());
 
-            System.out.print(game.getPlayer(player) + ", select a pile to choose from: ");
+            System.out.print(game.getPlayer(currentPlayer) + ", select a pile to choose from: ");
             selectedPile = keyboard.next();
+            while (game.isPileEmpty(selectedPile)) {
+                System.out.print("\nNice try, " + game.getPlayer(currentPlayer) + ". That pile is empty. Choose again: ");
+                selectedPile = keyboard.next();
+            }
 
             System.out.print("How many to remove from pile " + selectedPile + ": ");
             countToRemove = keyboard.nextInt();
+            while (countToRemove <= 0 || game.getPileCount(selectedPile) < countToRemove) {
+                if (game.getPileCount(selectedPile) < countToRemove) {
+                    System.out.print("\nPile " + selectedPile + " does not have that many. Try again: ");
+                } else if (countToRemove <= 0) {
+                    System.out.print("\nYou must choose at least 1. How many? ");
+                }
+                countToRemove = keyboard.nextInt();
+            }
 
             game.theBoard.getPileByName(selectedPile).removeFromPile(countToRemove);
-            player = (player + 1) % 2;
-        } while (!game.isFinished());
+            currentPlayer = (currentPlayer + 1) % 2;
+        }
 
-        System.out.println("\n" + game.getPlayer(player) + ", there are no counters left, so you WIN!. Good job!");
+        System.out.println("\n" + game.getPlayer(currentPlayer) + ", there are no counters left, so you WIN!. Good job!");
     }
 }
