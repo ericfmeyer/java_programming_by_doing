@@ -59,7 +59,7 @@ public class Nim {
         do {
             System.out.println(game.theBoard.generateOutputString());
 
-            System.out.print(game.thePlayers[player] + ", select a pile to choose from: ");
+            System.out.print(game.getPlayer(player) + ", select a pile to choose from: ");
             selectedPile = keyboard.next();
 
             System.out.print("How many to remove from pile " + selectedPile + ": ");
@@ -69,6 +69,6 @@ public class Nim {
             player = (player + 1) % 2;
         } while (!game.isFinished());
 
-        System.out.println("\nAll piles are empty. Good job!");
+        System.out.println("\n" + game.getPlayer(player) + ", there are no counters left, so you WIN!. Good job!");
     }
 }
