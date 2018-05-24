@@ -2,9 +2,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 class Pile {
+    private String name;
     private int count;
 
-    public void Pile(int n) {
+    public void Pile(String s, int n) {
+        name = s;
         count = n;
     }
 
@@ -15,63 +17,90 @@ class Pile {
     public int getPileCount() {
         return count;
     }
+
+    public void setPileName(String s) {
+        name = s;
+    }
+
+    public String getPileName() {
+        return name;
+    }
+
+    public boolean isEmpty() {
+        return (count > 0) ? false : true;
+    }
 }
 
 class Piles {
-    private int number_of_piles;
+    private Pile[] pile_list;
 
     public void Piles(int size) {
-        
-    }
-}
-
-public class BabyNim {
-    final static int NUMBER_OF_PILES = 3;
-
-    public static Pile[] fillPiles(int n) {
         Random r = new Random();
-        Pile[] retval = new Pile[n];
+        String pile_name;
+        pile_list = new Pile[size];
 
-        for (int i = 0; i < n; i++) {
-            retval[i].setPileCount(1 + r.nextInt(5));
-        }
-
-        return retval;
-    }
-
-    public static void printPiles(Pile[] piles) {
-        for (int i = 0; i < piles.length; i++) {
-            System.out.print((char) ((int) 'A' + i) + ": " + piles[i] + "\t");
+        for (int i = 0; i < size; i++) {
+            pile_name = Character.toString((char) ((int) 'A' + i));
+            pile_list[i].setPileName(pile_name);
+            pile_list[i].setPileCount(1 + r.nextInt(5));
         }
     }
 
-    public static boolean areAllPilesEmpty(int[] piles) {
-        boolean retval = true;
-        for (int i = 0; i < piles.length; i++) {
-            if (piles[i] > 0) {
-                retval = false;
+    public int getSize() {
+        return pile_list.length;
+    }
+
+    public Pile getPileByIndex(int index) {
+        return pile_list[index];
+    }
+
+    public Pile getPileByName(String pile_name) {
+        Pile retval = null;
+        for (int i = 0; i < pile_list.length; i++) {
+            if (pile_list[i].getPileName() == pile_name) {
+                retval = pile_list[i];
                 break;
             }
         }
         return retval;
     }
 
+    public boolean areAllPilesEmpty() {
+        boolean isempty = true;
+        for (int i = 0; i < pile_list.length; i++) {
+            if (!pile_list[i].isEmpty()) {
+                isempty = false;
+                break;
+            }
+        }
+        return isempty;
+    }
+
+    public void print() {
+        for (int i = 0; i < this.getSize(); i++) {
+            System.out.print(this.getPileByIndex(i).getPileName() + ": " + this.getPileByIndex(i).getPileCount() + "\t");
+        }
+    }
+}
+
+public class BabyNim {
+    final static int NUMBER_OF_PILES = 3;
+
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        Pile[] piles = fillPiles(NUMBER_OF_PILES);
-        String pile;
+        Piles the_piles = new Piles();
+        String pile_choice;
         int to_remove;
         int pile_index;
 
         do {
-            printPiles(piles);
+            the_piles.print();
             System.out.print("\nChoose a pile: ");
-            pile = keyboard.next();
-            System.out.print("How many to remove from pile " + pile + ": ");
+            pile_choice = keyboard.next();
+            System.out.print("How many to remove from pile " + pile_choice + ": ");
             to_remove = keyboard.nextInt();
-            pile_index = (int) pile.charAt(0) - (int) 'A';
-            piles[pile_index].setPileCount(piles[pile_index].getPileCount() - to_remove);
-        } while (!areAllPilesEmpty(piles));
+            the_piles.getPileByName(pile_choice).setPileCount(the_piles[pile_index].getPileCount() - to_remove);
+        } while (!areAllPilesEmpty(the_piles));
 
         System.out.println("\nAll piles are empty.Good job!");
     }
