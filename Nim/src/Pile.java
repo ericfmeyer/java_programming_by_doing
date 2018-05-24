@@ -37,6 +37,6 @@ public class Pile {
     }
 
     public boolean isEmpty() {
-        return (pileCount == 0);
+        return !(pileCount > 0);
     }
 }

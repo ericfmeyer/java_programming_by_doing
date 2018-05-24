@@ -29,26 +29,41 @@ public class PileTest {
 
     @Test
     public void getNameShouldReturnPileName() {
-        p.setName("A");
-        Assert.assertEquals("A", p.getName());
+        String expectedName = "A";
+        p.setName(expectedName);
+        Assert.assertEquals(expectedName, p.getName());
     }
 
     @Test
     public void getCountShouldReturnPileCount() {
-        p.setCount(3);
-        Assert.assertEquals(3, p.getCount());
+        int expectedCount = 123;
+        p.setCount(expectedCount);
+        Assert.assertEquals(expectedCount, p.getCount());
     }
 
     @Test
     public void removeFromPileShouldRemoveCorrectCount() {
-        p.setCount(3);
+        int expectedCount = 2;
+        p.setCount(expectedCount + 1);
         p.removeFromPile(1);
-        Assert.assertEquals(2, p.getCount());
+        Assert.assertEquals(expectedCount , p.getCount());
     }
 
     @Test
-    public void testIsPileEmpty() {
+    public void pileShouldBeEmptyWithZero() {
         p.setCount(0);
-        Assert.assertEquals(true, p.isEmpty());
+        Assert.assertTrue(p.isEmpty());
+    }
+
+    @Test
+    public void pileShouldBeEmptyWithNegativeValue() {
+        p.setCount(-1);
+        Assert.assertTrue(p.isEmpty());
+    }
+
+    @Test
+    public void pileShouldNotBeEmptyWithPositiveValue() {
+        p.setCount(1);
+        Assert.assertFalse(p.isEmpty());
     }
 }
