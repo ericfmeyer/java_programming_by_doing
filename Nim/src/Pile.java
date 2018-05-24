@@ -6,11 +6,12 @@ public class Pile {
     private String pileName;
     private int pileCount;
 
-    public void Pile() {
+    public Pile() {
         pileName = "";
         pileCount = 0;
     }
-    public void Pile(String name, int count) {
+
+    public Pile(String name, int count) {
         pileName = name;
         pileCount = count;
     }

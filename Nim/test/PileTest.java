@@ -15,6 +15,19 @@ public class PileTest {
     }
 
     @Test
+    public void noArgumentConstructorShouldReturnCorrectPileNameAndPileCount() {
+        Assert.assertEquals("", p.getName());
+        Assert.assertEquals(0, p.getCount());
+    }
+
+    @Test
+    public void argumentConstructorShouldReturnCorrectPileNameAndPileCount() {
+        p = new Pile("X", 1);
+        Assert.assertEquals("X", p.getName());
+        Assert.assertEquals(1, p.getCount());
+    }
+
+    @Test
     public void getNameShouldReturnPileName() {
         p.setName("A");
         Assert.assertEquals("A", p.getName());
