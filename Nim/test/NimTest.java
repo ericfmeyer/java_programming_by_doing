@@ -41,8 +41,9 @@ public class NimTest {
     }
 
     @Test
-    public void GivenGameExistsWhenBoardIsEmptyThenGameIsFinished() {
+    public void GivenGameExistsWhenBoardHasOnlyOneCountLeftThenGameIsFinished() {
         testGameOfNim.clearBoard();
+        testGameOfNim.getTheBoard().getPileByIndex(0).setCount(1);
         Assert.assertTrue(testGameOfNim.isFinished());
     }
 

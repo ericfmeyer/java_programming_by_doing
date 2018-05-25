@@ -48,7 +48,11 @@ public class Nim {
     }
 
     public boolean isFinished() {
-        return theBoard.areAllPilesEmpty();
+        int total_count = 0;
+        for (int i = 0; i < this.getTheBoard().getSize(); i++) {
+            total_count += this.getTheBoard().getPileByIndex(i).getCount();
+        }
+        return total_count == 1;
     }
 
     public static void main(String[] args) {
@@ -88,6 +92,7 @@ public class Nim {
             currentPlayer = (currentPlayer + 1) % 2;
         }
 
-        System.out.println("\n" + game.getPlayer(currentPlayer) + ", there are no counters left, so you WIN!. Good job!");
+        System.out.println("\n" + game.getPlayer(currentPlayer) + ", you must take the last remaining counter, so you lose.");
+        System.out.println(game.getPlayer(currentPlayer + 1) + " wins!");
     }
 }
