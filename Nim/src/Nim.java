@@ -61,7 +61,6 @@ public class Nim {
         for (int i = 0; i < 2; i++) {
             System.out.print("Player " + i + ", enter your name: ");
             game.setPlayer(i, keyboard.next());
-            System.out.println(game.getPlayer(i));
         }
 
         while (!game.isFinished()) {
