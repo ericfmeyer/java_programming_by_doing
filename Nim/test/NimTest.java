@@ -45,4 +45,21 @@ public class NimTest {
         testGameOfNim.clearBoard();
         Assert.assertTrue(testGameOfNim.isFinished());
     }
+
+    @Test
+    public void GivenGameExistsThenNoPileIsEmpty() {
+        Assert.assertFalse(testGameOfNim.isPileEmpty("A"));
+    }
+
+    @Test
+    public void GivenGameExistsWhenLastCountIsRemovedFromPileThenPileIsEmpty() {
+        testGameOfNim.clearBoard();
+        Assert.assertTrue(testGameOfNim.isPileEmpty("A"));
+    }
+
+    @Test
+    public void testGetPileCount() {
+        int expected = testGameOfNim.getTheBoard().getPileByName("A").getCount();
+        Assert.assertEquals(expected, testGameOfNim.getPileCount("A"));
+    }
 }
