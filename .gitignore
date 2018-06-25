@@ -22,6 +22,8 @@
 hs_err_pid*
 
 # IntelliJ stuff
-.idea/workspace.xml
-.idea/tasks.xml
+Nim/.idea/workspace.xml
+Nim/.idea/tasks.xml
+Blackjack/.idea/workspace.xml
+Blackjack/.idea/tasks.xml
 out
