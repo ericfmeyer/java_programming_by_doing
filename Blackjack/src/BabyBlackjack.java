@@ -9,8 +9,8 @@ public class BabyBlackjack {
     private static Random rng = new Random();
 
     private static void drawCards(BlackjackHand theHand) {
-        theHand.addCard(new Card(rng.nextInt(10) + 1));
-        theHand.addCard(new Card(rng.nextInt(10) + 1));
+        theHand.addCard(new Card(rng.nextInt(10) + 2));
+        theHand.addCard(new Card(rng.nextInt(10) + 2));
     }
 
     private static void printHand(BlackjackHand theHand) {
